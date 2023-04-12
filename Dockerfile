@@ -1,7 +1,7 @@
 # arch - architecture that we're targetting.
 #	 possible values: arm | arm64 | native
 
-ARG arch="arm64"
+ARG arch="arm"
 
 
 # base - contains the build tools necessary for building

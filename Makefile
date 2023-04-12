@@ -5,12 +5,12 @@ GOLANG_BUILD_FLAGS = -tags netgo -ldflags '-w -extldflags "-static"'
 
 # architecture to target at when building.
 #
-ARCH ?= arm64
+ARCH ?= arm
 
 
 # concourse version
 #
-VERSION ?= 5.2.0
+VERSION ?= 7.9.1
 
 
 # directory where the results of a local compilation should
@@ -22,13 +22,13 @@ BUILD_DIR ?= ./build/$(ARCH)/concourse
 # builds the docker image that contains Concourse installed
 # with all dependencies for running web / worker.
 #
-images: image-arm64 image-arm
+images: image-arm
 
 
 # builds for all the supported platforms using docker
 # containers and cross compilation.
 #
-dockerized: dockerized-arm64 dockerized-arm
+dockerized: dockerized-arm
 
 
 image-arm64: ARCH=arm64
